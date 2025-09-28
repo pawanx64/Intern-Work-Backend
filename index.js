@@ -4,6 +4,7 @@ const cors = require("cors");
 require("dotenv").config();
 
 const healthRoutes = require("./routes/healthRoutes");
+const recommendationRoutes = require("./routes/recommendationRoutes");
 
 const app = express();
 
@@ -13,6 +14,7 @@ app.use(express.json());
 
 // Routes
 app.use("/api/health", healthRoutes);
+app.use("/api/recommendations", recommendationRoutes);
 
 // MongoDB connect
 mongoose
